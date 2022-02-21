@@ -18,11 +18,16 @@ def detect_os(ttl, ip):
     else:
         return 'The OS cannot be detected.'
 
-if __name__ == '__main__':
-
+def main():
     if len(sys.argv) != 2:
         print('[!] Usage: wsys <IP_ADDRESS>, example -> wsys 8.8.8.8')
     else:
         ttl = get_ttl(sys.argv[1])
         print(detect_os(ttl, sys.argv[1]))
+
+
+if __name__ == '__main__':
+
+    main()
+
 
